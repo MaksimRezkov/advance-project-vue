@@ -1,11 +1,13 @@
 <script setup lang="ts">
+  import { MainLayout } from '@/layouts/MainLayout';
 </script>
 
 <template>
-  <div>
+  <MainLayout>
     <RouterView/>
-  </div>
+  </MainLayout>
 </template>
 
-<style scoped>
+<style lang="scss">
+@import "./styles//style.scss";
 </style>
