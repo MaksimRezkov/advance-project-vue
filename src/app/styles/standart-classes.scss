@@ -1,0 +1,41 @@
+.flex {
+  display: flex;
+  &-all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-j-between {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-j-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-j-end {
+    display: flex;
+    justify-content: end;
+  }
+
+  &-a-center {
+    display: flex;
+    align-items: center;
+  }
+
+  &-column {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.noBorder {
+  border: none;
+}

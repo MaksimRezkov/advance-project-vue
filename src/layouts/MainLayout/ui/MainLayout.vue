@@ -1,14 +1,19 @@
 <template>
   <div class="main__layout layout">
-    <Header/>
-    <div class="layout-page__content"></div>
-    <slot></slot>
+    <Header :route-home="homeRoute" :routes="routePaths"></Header>
+    <div class="layout-page__content">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
 
 <script setup lang='ts'>
   import { Header } from '@/widgets/header';
+  import { useDefineRouteConfig } from '../lib/hooks/useDefineRoutes';
+
+  const { homeRoute, routePaths } = useDefineRouteConfig();
+
 </script>
 
 
@@ -18,9 +23,11 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
-    &-page_content {
+    &-page__content {
       width: var(--content-width);
+      max-width: var(--max-content-width);
     }
   }
 </style>
