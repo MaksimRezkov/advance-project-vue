@@ -1,6 +1,9 @@
 <template>
   <div class="main__layout layout">
-    <Header :route-home="homeRoute" :routes="routePaths"></Header>
+    <Header
+      :route-home="homeRoute"
+      :routes="routePaths"
+    />
     <div class="layout-page__content">
       <slot></slot>
     </div>
@@ -10,9 +13,9 @@
 
 <script setup lang='ts'>
   import { Header } from '@/widgets/header';
-  import { useDefineRouteConfig } from '../lib/hooks/useDefineRoutes';
+  import { useDefineRoutes } from '../lib/hooks/useDefineRoutes';
 
-  const { homeRoute, routePaths } = useDefineRouteConfig();
+  const { homeRoute, routePaths } = useDefineRoutes();
 
 </script>
 
